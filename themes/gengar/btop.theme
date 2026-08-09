@@ -1,0 +1,77 @@
+# Gengar Theme for btop++
+# Estética morada neón para combinar con Hyprland y Waybar
+
+# Colores en hexadecimal
+
+# Fondo principal (Vacío para transparencia total de la terminal)
+theme[main_bg]=""
+
+# Color de texto principal
+theme[main_fg]="#e1e1e1"
+
+# Color de los títulos de las cajas (Blanco brillante para resaltar)
+theme[title]="#ffffff"
+
+# Color de resaltado para atajos de teclado (Fucsia Gengar)
+theme[hi_fg]="#df00ff"
+
+# Fondo de elemento seleccionado en procesos (Morado oscuro)
+theme[selected_bg]="#4b0082"
+
+# Texto de elemento seleccionado
+theme[selected_fg]="#ffffff"
+
+# Texto inactivo o deshabilitado (Gris oscuro)
+theme[inactive_fg]="#4C566A"
+
+# Colores misceláneos en procesos y gráficas pequeñas
+theme[proc_misc]="#8a2be2"
+
+# Color de los bordes de las cajas (Morado suave para no cansar la vista)
+theme[cpu_box]="#8a2be2"
+theme[mem_box]="#8a2be2"
+theme[net_box]="#8a2be2"
+theme[proc_box]="#8a2be2"
+
+# Color de las líneas divisorias
+theme[div_line]="#4b0082"
+
+# Gráfica de Temperatura (De morado frío a blanco rosado)
+theme[temp_start]="#4b0082"
+theme[temp_mid]="#8a2be2"
+theme[temp_end]="#e1e1e1"
+
+# Gráfica de CPU (Degradado Gengar completo)
+theme[cpu_start]="#4b0082"
+theme[cpu_mid]="#8a2be2"
+theme[cpu_end]="#df00ff"
+
+# Medidores de Memoria y Discos (Free / Disponible)
+theme[free_start]="#4b0082"
+theme[free_mid]="#8a2be2"
+theme[free_end]="#df00ff"
+
+# Medidores de Memoria (Cached)
+theme[cached_start]="#4b0082"
+theme[cached_mid]="#8a2be2"
+theme[cached_end]="#df00ff"
+
+# Medidores de Memoria (Available)
+theme[available_start]="#4b0082"
+theme[available_mid]="#8a2be2"
+theme[available_end]="#df00ff"
+
+# Medidores de Memoria y Discos (Used)
+theme[used_start]="#4b0082"
+theme[used_mid]="#8a2be2"
+theme[used_end]="#df00ff"
+
+# Gráfica de Descarga (Download)
+theme[download_start]="#4b0082"
+theme[download_mid]="#8a2be2"
+theme[download_end]="#df00ff"
+
+# Gráfica de Subida (Upload)
+theme[upload_start]="#4b0082"
+theme[upload_mid]="#8a2be2"
+theme[upload_end]="#df00ff"
