@@ -1,0 +1,26 @@
+# No añadir línea nueva al inicio
+add_newline = false
+
+# Definimos el orden de los bloques
+format = """
+[](fg:#FE8019)\
+$username\
+[](fg:#FE8019 bg:#504945)\
+$directory\
+[](fg:#504945)\
+$character
+"""
+
+[username]
+show_always = true
+style_user = "bg:#FE8019 fg:#1D2021"
+format = "[$user]($style)"
+
+[directory]
+style = "bg:#504945 fg:#EBDBB2"
+format = "[ $path ]($style)"
+truncation_length = 3
+
+[character]
+success_symbol = "[ ➜ ](bold #B8BB26)"
+error_symbol = "[ ✗ ](bold #FB4934)"

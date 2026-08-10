@@ -1,0 +1,148 @@
+/* @import "colors/colors.css"; */
+
+/* ---- Colores Base ---- */
+@define-color bar_bg rgba(29, 32, 33, 0.85); /* bg0 con opacidad */
+@define-color pill_bg #1D2021;               /* bg0 */
+@define-color text_color #EBDBB2;            /* fg0 */
+@define-color shadow_color rgba(20, 22, 23, 0.4); /* bg_dim con opacidad */
+
+/* ---- Colores Principales de tu Tema ---- */
+@define-color accent_inactive #504945;       /* bg5 */
+@define-color accent_mid #FABD2F;            /* yellow */
+@define-color accent_active #FE8019;         /* orange */
+
+/* ---- Estados y Alertas ---- */
+@define-color color_urgent #FB4934;          /* red */
+@define-color color_warning #FABD2F;         /* yellow */
+@define-color color_charging #B8BB26;        /* green */
+
+/* ---- Workspaces ---- */
+@define-color ws_inactive_text #928374;      /* grey1 */
+@define-color ws_active_text #1D2021;        /* bg0 para contraste */
+@define-color ws_hover_bg rgba(254, 128, 25, 0.3); /* orange con opacidad */
+
+* {
+    font-family: 'JetBrainsMono Nerd Font Propo', 'FontAwesome 6 Free', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fondo principal de la barra */
+window#waybar {
+    background-color: transparent;
+    color: @text_color;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* ---- Estilo de Cápsulas (Grupos) basado en la imagen ---- */
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: @pill_bg;
+    border-radius: 20px;
+    margin: 2px 10px;
+    padding: 0px 12px;
+    border: 1px solid @accent_inactive;
+    box-shadow: 0 0 6px @shadow_color;
+}
+
+/* Separación interna de los módulos individuales */
+#clock,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#temperature,
+#bluetooth,
+#custom-spotify,
+#custom-power,
+#workspaces,
+#tray,
+#network,
+#pulseaudio,
+#backlight,
+#battery {
+    padding: 0 10px;
+    background: transparent;
+}
+
+/* ---- Workspaces (Transición Fluida) ---- */
+#workspaces {
+    padding: 0;
+}
+
+#workspaces button {
+    padding: 2px 10px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    color: @ws_inactive_text;
+    background-color: transparent;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
+#workspaces button:hover {
+    background-color: @ws_hover_bg;
+    color: @ws_active_text;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button.active {
+    background: linear-gradient(45deg, @accent_inactive, @accent_mid, @accent_active);
+    color: @ws_active_text;
+    min-width: 40px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#workspaces button.urgent {
+    background-color: @color_urgent;
+    color: @pill_bg;
+}
+
+/* ---- Efectos Hover en iconos ---- */
+#pulseaudio:hover, #network:hover, #battery:hover, #bluetooth:hover, #clock:hover {
+    color: @accent_active;
+    transition: color 0.3s ease;
+}
+
+/* ---- Estados de Batería ---- */
+#battery.charging, #battery.plugged {
+    color: @color_charging;
+}
+
+#battery.warning:not(.charging) {
+    color: @color_warning;
+}
+
+#battery.critical:not(.charging) {
+    color: @color_urgent;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% { color: @color_urgent; }
+    50% { color: @text_color; }
+    100% { color: @color_urgent; }
+}
+
+/* ---- Otros Estados ---- */
+#pulseaudio.muted {
+    color: @color_urgent;
+}
+
+#temperature.critical {
+    color: @color_urgent;
+}
+
+#tray > .needs-attention {
+    background-color: @color_urgent;
+    color: @pill_bg;
+    border-radius: 20px;
+    padding: 0 5px;
+}

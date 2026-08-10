@@ -1,0 +1,75 @@
+# Gruvbox Theme for btop++
+# Estética cálida basada en la paleta oficial
+
+# Fondo principal (Vacío para transparencia total de la terminal)
+theme[main_bg]=""
+
+# Color de texto principal
+theme[main_fg]="#EBDBB2"
+
+# Color de los títulos de las cajas (Blanco cálido para resaltar)
+theme[title]="#EBDBB2"
+
+# Color de resaltado para atajos de teclado (Naranja)
+theme[hi_fg]="#FE8019"
+
+# Fondo de elemento seleccionado en procesos (Gris oscuro bg5)
+theme[selected_bg]="#504945"
+
+# Texto de elemento seleccionado
+theme[selected_fg]="#EBDBB2"
+
+# Texto inactivo o deshabilitado (Gris medio grey0)
+theme[inactive_fg]="#7C6F64"
+
+# Colores misceláneos en procesos y gráficas pequeñas (Aqua)
+theme[proc_misc]="#8EC07C"
+
+# Color de los bordes de las cajas (Gris oscuro bg5 para no cansar la vista)
+theme[cpu_box]="#504945"
+theme[mem_box]="#504945"
+theme[net_box]="#504945"
+theme[proc_box]="#504945"
+
+# Color de las líneas divisorias
+theme[div_line]="#3C3836"
+
+# Gráfica de Temperatura (De verde a rojo crítico)
+theme[temp_start]="#B8BB26"
+theme[temp_mid]="#FABD2F"
+theme[temp_end]="#FB4934"
+
+# Gráfica de CPU (Degradado Gruvbox)
+theme[cpu_start]="#B8BB26"
+theme[cpu_mid]="#FABD2F"
+theme[cpu_end]="#FB4934"
+
+# Medidores de Memoria y Discos (Free / Disponible)
+theme[free_start]="#B8BB26"
+theme[free_mid]="#8EC07C"
+theme[free_end]="#83A598"
+
+# Medidores de Memoria (Cached)
+theme[cached_start]="#83A598"
+theme[cached_mid]="#D3869B"
+theme[cached_end]="#D3869B"
+
+# Medidores de Memoria (Available)
+theme[available_start]="#B8BB26"
+theme[available_mid]="#FABD2F"
+theme[available_end]="#FE8019"
+
+# Medidores de Memoria y Discos (Used)
+theme[used_start]="#FABD2F"
+theme[used_mid]="#FE8019"
+theme[used_end]="#FB4934"
+
+# Gráfica de Descarga (Download) - Aqua a Azul
+theme[download_start]="#8EC07C"
+theme[download_mid]="#83A598"
+theme[download_end]="#83A598"
+
+# Gráfica de Subida (Upload) - Naranja a Rojo
+theme[upload_start]="#FABD2F"
+theme[upload_mid]="#FE8019"
+theme[upload_end]="#FB4934"

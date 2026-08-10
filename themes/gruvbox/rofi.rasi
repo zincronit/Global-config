@@ -1,0 +1,77 @@
+* {
+    bg: #1D2021;
+    bg-alt: #282828;
+    fg: #EBDBB2;
+    accent: #FABD2F;
+
+    background-color: @bg;
+    text-color: @fg;
+}
+
+configuration {
+    modi: "drun";
+    show-icons: true;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+window {
+    width: 520px;
+    border: 2px;
+    border-color: @accent; /* Borde sutil a la ventana */
+    border-radius: 16px;
+    background-color: @bg;
+}
+
+mainbox {
+    padding: 14px;
+}
+
+entry {
+    padding: 12px;
+    margin: 0px 0px 12px 0px;
+    border-radius: 10px;
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+prompt {
+    enabled: false;
+}
+
+listview {
+    lines: 8;
+    spacing: 8px;
+    background-color: transparent;
+    fixed-height: true;
+}
+
+element {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    text-color: @fg;
+    cursor: pointer;
+}
+
+/* Esto asegura que el icono y el texto cambien juntos */
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 24px;
+    margin: 0 10px 0 0;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg; /* Texto oscuro sobre fondo claro para legibilidad */
+}
+
+/* Efecto al pasar el mouse */
+element normal hover, element alternate hover {
+    background-color: @bg-alt;
+    text-color: @accent;
+}
