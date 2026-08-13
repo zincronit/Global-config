@@ -1,0 +1,128 @@
+/* ---- Base Colors ---- */
+@define-color bar_bg rgba(39, 46, 51, 0.85);
+@define-color pill_bg #272E33;
+@define-color text_color #D3C6AA;
+@define-color shadow_color rgba(30, 35, 38, 0.4);
+
+/* ---- Green Dominant Theme Colors ---- */
+@define-color accent_inactive #3C4841;            /* bg_green */
+@define-color accent_mid #83C092;                 /* aqua */
+@define-color accent_active #A7C080;              /* green */
+
+/* ---- States and Alerts ---- */
+@define-color color_urgent #E67E80;
+@define-color color_warning #DBBC7F;
+@define-color color_charging #A7C080;
+
+/* ---- Workspaces ---- */
+@define-color ws_inactive_text #859289;
+@define-color ws_active_text #272E33;
+@define-color ws_hover_bg rgba(167, 192, 128, 0.3); /* green with opacity */
+
+* {
+    font-family: 'JetBrainsMono Nerd Font Propo', 'FontAwesome 6 Free', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @text_color;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: @pill_bg;
+    border-radius: 20px;
+    margin: 2px 10px;
+    padding: 0px 12px;
+    border: 1px solid @accent_inactive;
+    box-shadow: 0 0 6px @shadow_color;
+}
+
+#clock, #power-profiles-daemon, #cpu, #memory, #temperature,
+#bluetooth, #custom-spotify, #custom-power, #workspaces,
+#tray, #network, #pulseaudio, #backlight, #battery {
+    padding: 0 10px;
+    background: transparent;
+}
+
+#workspaces {
+    padding: 0;
+}
+
+#workspaces button {
+    padding: 2px 10px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    color: @ws_inactive_text;
+    background-color: transparent;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
+#workspaces button:hover {
+    background-color: @ws_hover_bg;
+    color: @ws_active_text;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button.active {
+    background: linear-gradient(45deg, @accent_inactive, @accent_mid, @accent_active);
+    color: @ws_active_text;
+    min-width: 40px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#workspaces button.urgent {
+    background-color: @color_urgent;
+    color: @pill_bg;
+}
+
+#pulseaudio:hover, #network:hover, #battery:hover, #bluetooth:hover, #clock:hover {
+    color: @accent_active;
+    transition: color 0.3s ease;
+}
+
+#battery.charging, #battery.plugged {
+    color: @color_charging;
+}
+
+#battery.warning:not(.charging) {
+    color: @color_warning;
+}
+
+#battery.critical:not(.charging) {
+    color: @color_urgent;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% { color: @color_urgent; }
+    50% { color: @text_color; }
+    100% { color: @color_urgent; }
+}
+
+#pulseaudio.muted {
+    color: @color_urgent;
+}
+
+#temperature.critical {
+    color: @color_urgent;
+}
+
+#tray > .needs-attention {
+    background-color: @color_urgent;
+    color: @pill_bg;
+    border-radius: 20px;
+    padding: 0 5px;
+}

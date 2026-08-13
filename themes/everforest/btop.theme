@@ -1,0 +1,62 @@
+# Everforest Theme for btop++
+# Green-dominant aesthetics based on the official palette
+
+theme[main_bg]=""
+theme[main_fg]="#D3C6AA"
+theme[title]="#A7C080"
+
+# Highlight color for keyboard shortcuts (Green)
+theme[hi_fg]="#A7C080"
+
+# Background of selected item in processes (bg_green)
+theme[selected_bg]="#3C4841"
+theme[selected_fg]="#D3C6AA"
+theme[inactive_fg]="#7A8478"
+
+# Miscellaneous colors in processes and small graphs (Aqua)
+theme[proc_misc]="#83C092"
+
+# Box borders color (bg2)
+theme[cpu_box]="#374145"
+theme[mem_box]="#374145"
+theme[net_box]="#374145"
+theme[proc_box]="#374145"
+theme[div_line]="#2E383C"
+
+# Temperature Graph (Aqua to Green to Yellow)
+theme[temp_start]="#83C092"
+theme[temp_mid]="#A7C080"
+theme[temp_end]="#DBBC7F"
+
+# CPU Graph
+theme[cpu_start]="#83C092"
+theme[cpu_mid]="#A7C080"
+theme[cpu_end]="#DBBC7F"
+
+# Memory and Disk Meters (Free / Available)
+theme[free_start]="#A7C080"
+theme[free_mid]="#83C092"
+theme[free_end]="#7FBBB3"
+
+# Memory Meters (Cached)
+theme[cached_start]="#7FBBB3"
+theme[cached_mid]="#83C092"
+theme[cached_end]="#A7C080"
+
+# Memory Meters (Available)
+theme[available_start]="#83C092"
+theme[available_mid]="#A7C080"
+theme[available_end]="#DBBC7F"
+
+# Memory and Disk Meters (Used)
+theme[used_start]="#A7C080"
+theme[used_mid]="#DBBC7F"
+theme[used_end]="#E67E80"
+
+theme[download_start]="#83C092"
+theme[download_mid]="#A7C080"
+theme[download_end]="#A7C080"
+
+theme[upload_start]="#A7C080"
+theme[upload_mid]="#DBBC7F"
+theme[upload_end]="#E67E80"

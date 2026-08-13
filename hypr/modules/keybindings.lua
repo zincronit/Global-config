@@ -8,8 +8,8 @@
 --local fileManager = "ranger"
 local terminal   = "kitty"
 local menu       = "hyprlauncher"
-local browser    = "firefox"
-local launcher   = "rofi -show drun -theme ~/.config/rofi/zincronit.rasi"
+local browser    = "zen-browser"
+local launcher   = "rofi -show drun -theme ~/.config/rofi/config.rasi"
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
@@ -31,7 +31,8 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(browser))
 hl.bind("Print", hl.dsp.exec_cmd("grim - | wl-copy"))
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("/home/zincronit/.config/waybar/scripts/launch.sh"))
-
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("/home/zincronit/global-config/scripts/change_theme.sh"))
+hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("/home/zincronit/global-config/scripts/change_wallpaper.sh"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -52,7 +53,7 @@ hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
+ hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
@@ -74,7 +75,7 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- submap mode
-hl.bind(mainMod .. " + L", hl.dsp.submap("resize"))
+hl.bind(mainMod .. " + Q", hl.dsp.submap("resize"))
 
 hl.define_submap("resize", function()
 
