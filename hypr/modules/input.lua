@@ -4,8 +4,8 @@
 
 hl.config({
     input = {
-        kb_layout  = "us,",
-        -- kb_variant = ",dvorak",
+        kb_layout  = "us",
+        -- kb_variant = "altgr-intl",
         -- kb_model   = "",
         -- kb_options = "grp:alt_shift_toggle",
         -- kb_rules   = "",
@@ -22,18 +22,20 @@ hl.config({
     },
 })
 
-hl.device{
+hl.device({
     name       = "at-translated-set-2-keyboard",
     kb_layout  = "us,us",
     kb_variant = "dvorak,",
     kb_options = "ctrl:swapcaps",
     -- kb_options="grp:alt_shift_toggle", 
     
-}
+})
 
 hl.device({
-    name = "foostan-corne-v4",
-    kb_layout = "us",
+    name       = "foostan-corne-v4",
+    kb_layout  = "us,us",
+    kb_variant = ",altgr-intl",
+    kb_options = "grp:win_space_toggle",
 })
 
 hl.gesture({
