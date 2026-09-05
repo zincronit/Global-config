@@ -22,7 +22,7 @@ ln -sf "$THEME_PATH/hypr.lua" "$HOME/global-config/hypr/modules/colors.lua"
 ln -sf "$THEME_PATH/kitty.conf" "$HOME/global-config/kitty/colors.conf" 
 ln -sf "$THEME_PATH/rofi.rasi" "$HOME/.config/rofi/config.rasi"
 #starship
-ln -sf "$THEME_PATH/waybar.css" "$HOME/global-config/waybar/style.css"
+ln -sf "$THEME_PATH/waybar.css" "$HOME/global-config/waybar/colors/colors.css"
 
 awww img -t center "$THEME_PATH/wallpaper"
 

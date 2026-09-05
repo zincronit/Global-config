@@ -10,3 +10,10 @@ hl.monitor({
     scale    =  1,
 })
 
+hl.monitor({
+    output   = "HDMI-A-1",
+    mode     = "1440x900@59",
+    position = "auto-left",
+    scale    = "1",
+})
+

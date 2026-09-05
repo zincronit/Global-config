@@ -1,1 +1,1 @@
-/home/zincronit/global-config/themes/gengar/hypr.lua
+/home/zincronit/global-config/themes/everforest/hypr.lua

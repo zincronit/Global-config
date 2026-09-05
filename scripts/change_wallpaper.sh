@@ -2,10 +2,10 @@
 
 CONFIG_PATH="$HOME/global-config"
 THEMES_PATH="$CONFIG_PATH/themes"
-WAYBAR_LINK="$CONFIG_PATH/waybar/style.css"
+CAVA_LINK="$CONFIG_PATH/cava/themes/colors"
 
 
-CURRENT_THEME=$(basename "$(dirname "$(readlink "$WAYBAR_LINK")")")
+CURRENT_THEME=$(basename "$(dirname "$(readlink "$CAVA_LINK")")")
 
 WALLPAPER=$( ls "$THEMES_PATH/$CURRENT_THEME/wallpapers" | rofi -dmenu)
 
