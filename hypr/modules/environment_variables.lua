@@ -13,9 +13,9 @@ hl.env("XDG_SESSION_TYPE", "wayland")
 
 --hl.env("LIBVA_DRIVER_NAME", "nvidia")
 
-hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
-hl.env("GBM_BACKEND", "nvidia-drm")
+--hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+--hl.env("GBM_BACKEND", "nvidia-drm")
 
-hl.env("AQ_DRM_DEVICES", "/dev/dri/card2:/dev/dri/card1")
+hl.env("AQ_DRM_DEVICES", "/dev/dri/card1:/dev/dri/card2")
 
 --hl.env("AQ_MGPU_NO_EXPLICIT", "1")
